@@ -1,0 +1,74 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+.container > *{
+    min-width: 25rem;
+    max-width: 40rem;
+}
+
+img{
+    border-radius: 3rem;
+    flex:1 0;
+    object-fit: cover;
+    height:35rem;
+    margin:1rem;
+}
+
+.details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex:1 0;
+    border-radius: 3rem;
+    padding: 2rem;
+    color:black;
+    margin-left: 1rem;
+}
+
+.details .header{
+    display: flex;
+    justify-content: space-between;
+}
+.details .tags{
+    font-size:.8rem;
+    margin: 0 1rem 1rem 0;
+}
+.details .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.details .description{
+    font-weight: 200;
+    font-style:italic;
+    margin: 0 2rem 2rem 0;
+}
+
+.details .newArrival{
+    color: rgb(208, 58, 3);
+    font-size:1rem;
+}
+
+.details .price{
+    font-size: 1rem;
+    margin: 2rem 2rem 2rem 0;
+}
+
+.details button{
+    color:white;
+    background-color:  #0269d7;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    outline: none;
+}
+
+.details button:hover{
+    opacity: .9;
+    cursor: pointer;
+}
