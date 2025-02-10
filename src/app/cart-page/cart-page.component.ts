@@ -11,7 +11,7 @@ import { ProductService } from '../services/product/product.service';
 })
 export class CartPageComponent implements OnInit {
 
-  order!: Order;
+  order?: Order;
   orderItems: OrderItems[] = [];
   isVisible: boolean = true;
   constructor(private orderService:OrderService, private productService:ProductService) { 
