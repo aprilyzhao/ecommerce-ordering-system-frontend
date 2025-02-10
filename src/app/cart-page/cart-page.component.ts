@@ -13,13 +13,14 @@ export class CartPageComponent implements OnInit {
 
   order!: Order;
   orderItems: OrderItems[] = [];
-
+  isVisible: boolean = true;
   constructor(private orderService:OrderService, private productService:ProductService) { 
     
-    this.setCart(); 
+    
   }
   ngOnInit(): void {
-    console.log('Cart items:', this.order);
+    this.setCart(); 
+    //console.log('Cart items:', this.order);
   }
 
   removeFromCart(orderItems: OrderItems){
@@ -38,6 +39,7 @@ export class CartPageComponent implements OnInit {
     this.orderService.getUserOrder(userId).subscribe(order => {
       this.order = order;
       this.loadCartItems(order.id);
+      this.isVisible = (this.order?.items?.length??0) === 0;
     });
   }
   //comment
