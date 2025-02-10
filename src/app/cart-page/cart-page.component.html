@@ -5,7 +5,7 @@
 
 <div *ngIf="isVisible" class="container">
 <ul>
-    <li *ngFor="let orderItem of order.items">   
+    <li *ngFor="let orderItem of order?.items">   
     <div>
         <img [src]="orderItem.product.imageUrl" [alt]="orderItem.product.name"/>
     </div>
@@ -36,8 +36,8 @@
 </ul>
 <div class="checkout">
     <div>
-        <div class="foods-count">{{order.items.length}}</div>
-        <div class="total-price">{{order.totalPrice|currency}}</div>
+        <div class="foods-count">{{order?.items?.length}}</div>
+        <div class="total-price">{{order?.totalPrice|currency}}</div>
     </div>
     <div>
         <button class="checkout-button" >Process To Checkout</button>
