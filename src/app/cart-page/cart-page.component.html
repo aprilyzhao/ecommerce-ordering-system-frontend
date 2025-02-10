@@ -1,9 +1,9 @@
-<app-not-found [visible]= "!order.items.length" 
+<app-not-found [visible]= "isVisible"
     notFoundMessage="Cart Is Empty..." 
     resetLinkText="Back To Homepage">
 </app-not-found>
 
-<div *ngIf="order.items.length" class="container">
+<div *ngIf="isVisible" class="container">
 <ul>
     <li *ngFor="let orderItem of order.items">   
     <div>
