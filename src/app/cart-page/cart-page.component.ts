@@ -41,6 +41,7 @@ export class CartPageComponent implements OnInit {
     });
   }
   //comment
+  //comment2
   loadCartItems(orderId: number) {
     this.orderService.getCartItems(orderId).subscribe(items => {
       this.orderItems = items;
